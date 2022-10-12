@@ -1,0 +1,25 @@
+{
+  "name": "thirdstorage",
+  "version": "0.0.1",
+  "description": "CLI for Third Storage",
+  "homepage": "https://thirdstorage.com",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thirdstorage/cli"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "bin": "./index.js",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "chalk-animation": "^1.6.0",
+    "figlet": "^1.5.2",
+    "gradient-string": "^2.0.0",
+    "inquirer": "^8.2.0",
+    "minimist": "^1.2.7",
+    "nanospinner": "^1.0.0"
+  }
+}
