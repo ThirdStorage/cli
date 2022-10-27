@@ -7,7 +7,7 @@ async function welcome() {
 
 async function menu() {
   const command =
-    "run -it --volume //var/run/docker.sock:/var/run/docker.sock --rm thirdstorage-rabbit sh installer.sh";
+    "run -it --volume //var/run/docker.sock:/var/run/docker.sock --rm thirdstorage/demo sh installer.sh";
 
   try {
     const ls = spawn("docker", command.split(" "), {
