@@ -7,11 +7,11 @@ async function welcome() {
 
 async function menu() {
   const command =
-    "run -it --volume //var/run/docker.sock:/var/run/docker.sock --rm thirdstorage/demo-paradigm sh installer.sh";
+    "run -it --volume //var/run/docker.sock:/var/run/docker.sock --rm thirdstorage/alpha sh installer.sh";
 
   try {
     const ls = spawn("docker", command.split(" "), {
-      stdio: ["inherit", "pipe", "pipe"],
+      stdio: ["inherit", "inherit", "pipe"],
       cwd: process.cwd(),
       detached: false,
     });
@@ -24,7 +24,7 @@ async function menu() {
             "docker: error during connect: This error may indicate that the docker daemon is not running"
           )
       ) {
-        return console.log("Please start Docker to continue.");
+        return console.log("Please start Docker and try again to continue.");
       }
 
       console.log(`${data}`);
